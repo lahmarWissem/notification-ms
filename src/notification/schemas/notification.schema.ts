@@ -5,6 +5,9 @@ import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
   timestamps: true
 })
 export class Notification {
+
+  @Prop({ required: false })
+  offerId: string | undefined;
   @Prop({ required: false })
   senderId: string | undefined;
 

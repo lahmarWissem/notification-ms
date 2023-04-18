@@ -1,4 +1,5 @@
 interface UpdateNotificationDto {
+    offerId:string;
     senderId: string;
     recipientId: string;
     content: string;

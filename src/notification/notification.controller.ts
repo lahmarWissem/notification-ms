@@ -20,9 +20,10 @@ export class NotificationController {
     @Post()
     @Header('Access-Control-Allow-Origin', '*')
     async create(@Body() body: SendNotificationRequest) {
-        const {    senderId, recipientId, content, category } = body;
+        const { offerId,   senderId, recipientId, content, category } = body;
 
         const request: SendNotificationRequest = {
+            offerId,
             senderId,
             recipientId,
             content,
