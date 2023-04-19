@@ -2,7 +2,7 @@
 import { Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 
 @Schema({
-  timestamps: true
+ 
 })
 export class Notification {
 
@@ -20,8 +20,8 @@ export class Notification {
   @Prop({ required: false })
   category: string | undefined;
 
-  @Prop()
-  readAt?: Date | null;
+  @Prop({ type: Date, required: false, default: null })
+  readAt: Date | null;
 
   @Prop({ default: Date.now })
   createdAt: Date | undefined;

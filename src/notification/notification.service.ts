@@ -9,6 +9,7 @@ export interface SendNotificationRequest {
     recipientId: string;
     content: string;
     category: string;
+    readAt:Date;
 }
 
 export interface SendNotificationResponse {
@@ -25,7 +26,7 @@ export class NotificationService {
     async sendNotification(
         request: SendNotificationRequest,
     ): Promise<SendNotificationResponse> {
-        const {offerId, senderId, recipientId, content, category } = request;
+        const {offerId, senderId, recipientId, content, category,readAt } = request;
 
         const notification = await this.notificationsModel.create({
             offerId,
@@ -34,6 +35,7 @@ export class NotificationService {
             recipientId,
             content,
             category,
+            readAt
         });
 
         return { notification };

@@ -4,6 +4,6 @@ interface UpdateNotificationDto {
     recipientId: string;
     content: string;
     category: string;
-    readAt?: Date | null;
+    readAt: Date;
     createdAt: Date;
 }
