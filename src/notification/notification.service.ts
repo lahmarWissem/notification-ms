@@ -57,14 +57,5 @@ export class NotificationService {
     }
 
 
-    //     async updatelangueByUserID(userId: string, data: Langue) {
-    //         console.log(`Updating skills for user ${userId} with data:`, data);
-    //             const updatedData = await this.langueModel.findOneAndUpdate(
-    //           { IdUser: userId },
-    //           { $set: data },
-    //           { new: true }
-    //         );
-    //         return updatedData;
 
-    //  }
 }

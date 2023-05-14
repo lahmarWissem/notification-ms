@@ -9,9 +9,5 @@ async function bootstrap() {
   app.useWebSocketAdapter(new IoAdapter(app));
   app.enableCors()
   await app.listen(3011);
-
-
-
-
 }
 bootstrap();
